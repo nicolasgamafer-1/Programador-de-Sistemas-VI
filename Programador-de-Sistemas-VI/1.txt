@@ -1,0 +1,35 @@
+1 
+int num1, num2, soma;
+escreva("Digite o primeiro número:")
+   leia(num1)
+
+   escreva("Digite o segundo número:")
+   leia(num2)
+
+   soma = num1 + num2
+
+   escreva("Resultado da soma: %i ", soma)
+	FIM
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+2 
+int aluno1, aluno2, jjfeliz;
+escreva("Digite a nota do aluno1:")
+   leia(aluno1)
+
+	escreva("Digite a nota do aluno2:")
+   leia(aluno2)
+jjfeliz = (aluno1 + aluno2)/2
+
+	escreva ( "a média desses alunos é: %i", jjfeliz)
+		FIM
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+3
+int n1, n2, n3;
+	escreva("um numero")
+		leia(n1)
+	escreva("o  antecessor é: %i ",n1++)
+	escreva("o  sucessor é: %i ",n1-1)
+		FIM	
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
