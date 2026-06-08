@@ -1,15 +1,18 @@
 #include <stdio.h>
-
+ 
 int main() {
+    
+int funcionario = 0, hora = 0;
+    double salario = 0, conta = 0;
 
-    double a, b, media;
+    scanf("%d", &funcionario);
+    scanf("%d", &hora);
+    scanf("%lf", &salario);
 
-    scanf("%lf", &a);
-    scanf("%lf", &b);
+    conta = hora * salario;
 
-    media = ((a * 3.5) + (b * 7.5)) / 11.0;
-
-    printf("MEDIA = %.5lf\n", media);
+    printf("NUMBER = %d\n", funcionario);
+    printf("SALARY = U$ %.2lf\n", conta);
 
     return 0;
 }
