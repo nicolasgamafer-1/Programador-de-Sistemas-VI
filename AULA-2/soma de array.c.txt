@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+	
+int soma = 0;
+int vet [5];
+
+for(int i = 0; i < 5; i++){
+
+scanf("%d",&vet[i]);
+}
+
+for(int k = 0; k < 5; k++){
+
+soma = soma + vet [k];
+}
+
+printf("O valor da soma dos numeros e: %d\n",soma);
+
+return (0);
+}

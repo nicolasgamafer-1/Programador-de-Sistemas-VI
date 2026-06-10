@@ -1,18 +1,16 @@
 #include <stdio.h>
- 
+
 int main() {
-    
-int funcionario = 0, hora = 0;
-    double salario = 0, conta = 0;
+    int codigo1, qtd1;
+    int codigo2, qtd2;
+    double valor1, valor2;
 
-    scanf("%d", &funcionario);
-    scanf("%d", &hora);
-    scanf("%lf", &salario);
+    scanf("%d %d %lf", &codigo1, &qtd1, &valor1);
+    scanf("%d %d %lf", &codigo2, &qtd2, &valor2);
 
-    conta = hora * salario;
+    double total = qtd1 * valor1 + qtd2 * valor2;
 
-    printf("NUMBER = %d\n", funcionario);
-    printf("SALARY = U$ %.2lf\n", conta);
+    printf("VALOR A PAGAR: R$ %.2lf\n", total);
 
     return 0;
 }
