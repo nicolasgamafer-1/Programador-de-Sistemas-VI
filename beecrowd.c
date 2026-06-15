@@ -1,16 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    int codigo1, qtd1;
-    int codigo2, qtd2;
-    double valor1, valor2;
+    double A, B, C;
+    double pi = 3.14159;
 
-    scanf("%d %d %lf", &codigo1, &qtd1, &valor1);
-    scanf("%d %d %lf", &codigo2, &qtd2, &valor2);
+    scanf("%lf %lf %lf", &A, &B, &C);
 
-    double total = qtd1 * valor1 + qtd2 * valor2;
-
-    printf("VALOR A PAGAR: R$ %.2lf\n", total);
+    printf("TRIANGULO: %.3lf\n", (A * C) / 2.0);
+    printf("CIRCULO: %.3lf\n", pi * C * C);
+    printf("TRAPEZIO: %.3lf\n", ((A + B) * C) / 2.0);
+    printf("QUADRADO: %.3lf\n", B * B);
+    printf("RETANGULO: %.3lf\n", A * B);
 
     return 0;
 }
