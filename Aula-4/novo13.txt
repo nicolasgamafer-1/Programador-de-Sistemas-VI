@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main() {
+ int a=0, b=0, s=0, conta=0, ass=0;
+ 
+ scanf("%d", &a);
+ scanf("%d", &b);
+ scanf("%d", &s);
+ 
+conta = (a+b+abs(a-b))/2;
+
+ass = (conta+s+abs(conta-s))/2;
+
+printf("%d eh o maior\n", ass);
+ 
+    return 0;
+}

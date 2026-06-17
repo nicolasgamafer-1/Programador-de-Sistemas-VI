@@ -1,16 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    double A, B, C;
-    double pi = 3.14159;
+    int tempo, velocidade;
+    double litros;
 
-    scanf("%lf %lf %lf", &A, &B, &C);
+    scanf("%d", &tempo);
+    scanf("%d", &velocidade);
 
-    printf("TRIANGULO: %.3lf\n", (A * C) / 2.0);
-    printf("CIRCULO: %.3lf\n", pi * C * C);
-    printf("TRAPEZIO: %.3lf\n", ((A + B) * C) / 2.0);
-    printf("QUADRADO: %.3lf\n", B * B);
-    printf("RETANGULO: %.3lf\n", A * B);
+    litros = (tempo * velocidade) / 12.0;
+
+    printf("%.3lf\n", litros);
 
     return 0;
 }
