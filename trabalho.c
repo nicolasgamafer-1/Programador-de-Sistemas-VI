@@ -7,13 +7,16 @@ double divisao (double a, double b);
 double multiplicacao (double a, double b);
 double raiz (double raiz);
 double potencia (double a, int exp);
-int mmc (int a, int b);
-
+int mmc(int a, int b);
+int mdc(int a, int b);
+int fatorialsimples(int a);
+int fatorialduplo(int a);
 
 int main() 
 {
-	int calculo = 0, exp = 0;
+	int calculo = 0, exp = 0, resp = 0;
 	double a=0.0, b=0.0, resposta=0.0;
+	int aint =0, bint=0;
 
 
 	do 
@@ -26,7 +29,7 @@ int main()
 		switch (calculo)
 		{
 			case 3:
-				calculo = 0.0;
+				calculo = 3;
 			break;
 			
 			case 2:
@@ -85,17 +88,40 @@ int main()
 		
 		case 1:
 			printf("digite dois numeros\n");
-			scanf("%d", &a);
-			scanf("%d", &b);
-			resposta = mmc(a,b);
-			printf("a resposta: %.5lf\n", resposta);
+			scanf("%d", &aint);
+			scanf("%d", &bint);
+			resp = mmc(aint,bint);
+			printf("a resposta: %d\n", resp);
 			
 		break;
+		
+		case 0:
+			printf("digite dois numeros\n");
+			scanf("%d", &aint);
+			scanf("%d", &bint);
+			resp = mdc(aint,bint);
+			printf("a resposta: %d\n", resp);
+			
+		break;
+		
+			case 10: 
+		printf("Digite um numero\n");
+		scanf("%d", &aint);
+		resp = fatorialsimples(aint);
+		if (aint < 0) {
+			printf("Nao existe fatorial para numeros negativos.\n");
+		} else if (aint > 12) {
+			printf("Valores acima de 12 estouram o limite.\n");
+		} else {
+			printf("O fatorial e: %d\n", fatorialsimples(aint));
+		}
+		break;
+			
 			
 			default:
 				printf("essa nao es uma resposta valida\n");
 		}
-	}while(calculo != 0);
+	}while(calculo != 3);
  
     return 0;
 }
@@ -182,9 +208,44 @@ double potencia (double a, int exp)
 	return(resultado);
 }
 
-int potencia (int a, int b)
+int mmc (int a, int b)
 {
 	int c = 0;
 	
-	return();
+	 if (a == 0 || b == 0) return 0;
+	return (a / mdc(a, b)) * b; 
+	
+	return(c);
+}
+
+int mdc(int a, int b) {
+    int resto;
+    
+    while (b != 0) {
+        resto = a % b; 
+        a = b;         
+        b = resto;     
+    }
+    
+    return (a); 
+}
+
+int fatorialsimples(int a) {
+    int fatorial = 1;
+    
+    for (int i = 1; i <= a; i++) {
+        fatorial *= i;
+    }
+    
+    return (fatorial);
+}
+
+int fatorialduplo(int a) {
+    int fatorial = 1;
+    
+    for (int i = 1; i <= a; i+2) {
+        fatorial *= i;
+    }
+    
+    return (fatorial);
 }
