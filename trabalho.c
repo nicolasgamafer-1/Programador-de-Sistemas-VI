@@ -11,11 +11,12 @@ int mmc(int a, int b);
 int mdc(int a, int b);
 int fatorialsimples(int a);
 int fatorialduplo(int a);
+void segundoGrau(double a, double b, double c);
 
 int main() 
 {
 	int calculo = 0, exp = 0, resp = 0;
-	double a=0.0, b=0.0, resposta=0.0;
+	double a=0.0, b=0.0, c=0, resposta=0.0;
 	int aint =0, bint=0;
 
 
@@ -48,7 +49,7 @@ int main()
 			 printf("a resposta: %.5lf\n", resposta);
 			break;
 	 
-			case 4:
+			case 5:
 			 printf("digite dois numeros\n");
 			 scanf("%lf", &a);
 			 scanf("%lf", &b);
@@ -56,7 +57,7 @@ int main()
 			 printf("a resposta: %.5lf\n", resposta);
 			break;
 	 
-			case 5:
+			case 4:
 				printf("digite dois numeros\n");
 				scanf("%lf", &a);
 				scanf("%lf", &b);
@@ -72,8 +73,12 @@ int main()
 			case 8:
 				printf("digite um numeros\n");
 				scanf("%lf", &a);
+				if (a < 0) {
+				printf("Nao existe raiz quadrada real de numero negativo.\n");
+				}else {
 				resposta = raiz(a);
 				printf("a resposta: %.5lf\n", resposta);
+				}
 				
 			break;
 			
@@ -104,19 +109,39 @@ int main()
 			
 		break;
 		
-			case 10: 
-		printf("Digite um numero\n");
-		scanf("%d", &aint);
-		resp = fatorialsimples(aint);
-		if (aint < 0) {
-			printf("Nao existe fatorial para numeros negativos.\n");
-		} else if (aint > 12) {
-			printf("Valores acima de 12 estouram o limite.\n");
-		} else {
-			printf("O fatorial e: %d\n", fatorialsimples(aint));
-		}
+		case 10: 
+			printf("Digite um numero\n");
+			scanf("%d", &aint);
+			resp = fatorialsimples(aint);
+			if (aint < 0) {
+				printf("Nao existe fatorial para numeros negativos.\n");
+			} else if (aint > 12) {
+				printf("Valores acima de 12 estouram o limite.\n");
+			} else {
+				printf("O fatorial e: %d\n", fatorialsimples(aint));
+			}
 		break;
-			
+		
+		case 9:
+			printf("Digite um numero\n");
+			scanf("%d", &aint);
+			resp = fatorialduplo(aint);
+			if (aint < 0) {
+				printf("Nao existe fatorial para numeros negativos.\n");
+			} else {
+				printf("O fatorial e: %d\n", fatorialduplo(aint));
+			}	
+
+		break;	
+		
+		case 11:
+			printf("Digite os coeficientes a, b e c:\n");
+			scanf("%lf", &a);
+			scanf("%lf", &b);
+			scanf("%lf", &c);
+
+			segundoGrau(a, b, c);
+		break;
 			
 			default:
 				printf("essa nao es uma resposta valida\n");
@@ -179,16 +204,17 @@ return(c);
 double raiz (double a) 
 {
 	double raiz=0.0, b=0.0;
-	
 	b = a;
+	
+	if (a == 0)
+		return (0);
 
-for(int i=0; i < 100; i++)
-{
+	for(int i=0; i < 100; i++)
+	{
 
-raiz = 0.5*(b + (a/b));
-
-b = raiz;
-}
+		raiz = 0.5*(b + (a/b));
+		b = raiz;
+	}
 return(raiz);
 }
 
@@ -243,9 +269,42 @@ int fatorialsimples(int a) {
 int fatorialduplo(int a) {
     int fatorial = 1;
     
-    for (int i = 1; i <= a; i+2) {
+    for (int i = a; i > 1; i -= 2) {
         fatorial *= i;
     }
     
     return (fatorial);
+}
+
+void segundoGrau(double a, double b, double c)
+{
+    double delta, x1, x2;
+
+    if (a == 0)
+    {
+        printf("Nao e uma equacao do segundo grau.\n");
+        return;
+    }
+
+    delta = b * b - 4 * a * c;
+
+    if (delta < 0)
+    {
+        printf("A equacao nao possui raizes reais.\n");
+    }
+    else if (delta == 0)
+    {
+        x1 = -b / (2 * a);
+
+        printf("A equacao possui apenas uma raiz.\n");
+        printf("x = %.5lf\n", x1);
+    }
+    else
+    {
+        x1 = (-b + raiz(delta)) / (2 * a);
+        x2 = (-b - raiz(delta)) / (2 * a);
+
+        printf("x1 = %.5lf\n", x1);
+        printf("x2 = %.5lf\n", x2);
+    }
 }
