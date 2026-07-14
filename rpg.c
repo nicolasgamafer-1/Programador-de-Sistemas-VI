@@ -216,6 +216,29 @@ void combate()
     if(tipo==0)
     {
         printf("\nUm Goblin guerreiro apareceu!\n");
+        printf("                                \n");
+        printf("          ####..          ##############      mm####        \n");
+        printf("            ##########  ##################  ##  ##          \n");
+        printf("              ##############################  ##            \n");
+        printf("              ########  ######MM##########  ####            \n");
+        printf("                ######@@######    ######    ##              \n");
+        printf("                  ####++####################                \n");
+        printf("                      ..  ################                  \n");
+        printf("                        ######  ########mm                  \n");
+        printf("                    ######################                  \n");
+        printf("                  ##########  ##########                    \n");
+        printf("                ################    ::                      \n");
+        printf("              ########################                      \n");
+        printf("              ##################  ####                      \n");
+        printf("            ####  ######################                    \n");
+        printf("            ####  ################  ######                  \n");
+        printf("          ######  ################    ######                \n");
+        printf("          ####  MM##################      ##                \n");
+        printf("          ####      ######      ######  ##..                \n");
+        printf("            ####    ####        ####                        \n");
+        printf("                  ######        ####                        \n");
+        printf("                  ####          ########                    \n");
+        printf("                                                            \n");
         vidaMonstro=30;
         ataqueMonstro=5;
     }
@@ -223,6 +246,37 @@ void combate()
     else if(tipo==1)
     {
         printf("\nUm Esqueleto puro osso apareceu!\n");
+        printf("                                                            \n");
+        printf("                                                            \n");
+        printf("                                                            \n");
+        printf("                      ################@@                    \n");
+        printf("                  ##########################                \n");
+        printf("              ++######                  ######              \n");
+        printf("            ######                          ######          \n");
+        printf("          ######                              ####++        \n");
+        printf("          ####                                  ####        \n");
+        printf("        ####                                      ####      \n");
+        printf("        ####                                      ####      \n");
+        printf("      ####      ########              ########      ####    \n");
+        printf("      ####    ############          ############    ####    \n");
+        printf("      ####    ##        ####      ####      ####    ####    \n");
+        printf("      ####  @@##        ####      ####        ##    ####    \n");
+        printf("      ####    ############          ############    ####    \n");
+        printf("      ####      ########      ##    ++########      ####    \n");
+        printf("      ####                  ######                  ####    \n");
+        printf("        ####                ######                ####      \n");
+        printf("        ####              ####  ####              ####      \n");
+        printf("          ####            ##########            ####        \n");
+        printf("          ######          ##########          ######        \n");
+        printf("            ######                          ######          \n");
+        printf("              ####                          ####            \n");
+        printf("              ####      ####      ####      ####            \n");
+        printf("              ####      ####      ####      ####            \n");
+        printf("                ##############################              \n");
+        printf("                ############################mm              \n");
+        printf("                                                            \n");
+        printf("                                                            \n");
+
         vidaMonstro=50;
         ataqueMonstro=8;
     }
@@ -230,6 +284,36 @@ void combate()
     else if(tipo==2)
     {
         printf("\nUm Orc bombado apareceu!\n");
+        printf("                                                            \n");
+        printf("                                                            \n");
+        printf("                                                            \n");
+        printf("                                                            \n");
+        printf("                                                            \n");
+        printf("                                                            \n");
+        printf("                          ##########                        \n");
+        printf("                      ##mm          @@##                    \n");
+        printf("                    @@                  ::                  \n");
+        printf("            ####    ##                  ##    ##::          \n");
+        printf("                ##                          ##              \n");
+        printf("              ##  ##                      ##  ##            \n");
+        printf("              @@##..      ..##--##          ####            \n");
+        printf("              @@##::  ####    ##    ####  MM####            \n");
+        printf("              ####    ########  ########    ####            \n");
+        printf("              ##    mm  ####@@######@@  ##    ##            \n");
+        printf("                ##..@@    ##      ##    @@  ##              \n");
+        printf("                        ####@@##--####  --                  \n");
+        printf("                  ##                      ##                \n");
+        printf("                  ##  ##            --##  ##                \n");
+        printf("                  ##  ######      ######  ##                \n");
+        printf("                      ##    ######    ##                    \n");
+        printf("                    ##  --              ##                  \n");
+        printf("                      @@              ##                    \n");
+        printf("                        ##############                      \n");
+        printf("                                                            \n");
+        printf("                                                            \n");
+        printf("                                                            \n");
+        printf("                                                            \n");
+
         vidaMonstro=80;
         ataqueMonstro=12;
     }
@@ -237,6 +321,35 @@ void combate()
     else
     {
         printf("\nUm Lobisomem do arvoredo apareceu!\n");
+        printf("                                                            \n");
+        printf("                                                            \n");
+        printf("                                                            \n");
+        printf("                            ####    ##                      \n");
+        printf("                                  ##  ##                    \n");
+        printf("                          ##    ##    ##                    \n");
+        printf("                              mm      ##                    \n");
+        printf("                        ##                                  \n");
+        printf("                      ..                                    \n");
+        printf("                                            MM              \n");
+        printf("                  ##                  ##        ##          \n");
+        printf("                  ..##  MM            ##                    \n");
+        printf("                ##                    ##        ..          \n");
+        printf("            ##                          --        ##        \n");
+        printf("        ##@@                            ##@@        ##      \n");
+        printf("      ##..                            @@MM            ##    \n");
+        printf("        ##                          mm                  @@  \n");
+        printf("                        mm                                  \n");
+        printf("            ..++mm                ++                        \n");
+        printf("                                    MM                  MM..\n");
+        printf("                        ++    @@    mm                  ##  \n");
+        printf("                              ##    mm                  ##  \n");
+        printf("                      ##++    ++    ##                      \n");
+        printf("                        @@            ##          ::        \n");
+        printf("                                                ##          \n");
+        printf("                          ##                      --        \n");
+        printf("                                ####    @@    ##            \n");
+        printf("                                            ####            \n");
+
         vidaMonstro=120;
         ataqueMonstro=15;
     }
