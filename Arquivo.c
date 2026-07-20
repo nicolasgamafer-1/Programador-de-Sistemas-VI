@@ -163,7 +163,7 @@ void explorarMapa()
             break;
 
         case 2:
-            printf("\nVoce encontrou um bau de tesouro!\n");
+            printf("\nVoce encontrou um bau de tesouro!\a\n");
 
             ouro += rand()%40 + 10;
 
@@ -178,7 +178,7 @@ void explorarMapa()
                 if(inventario[i]==0)
                 {
                     inventario[i]=1;
-                    printf("Pocao adicionada ao inventario!\n");
+                    printf("Pocao adicionada ao inventario!\a\n");
                     break;
                 }
             }
