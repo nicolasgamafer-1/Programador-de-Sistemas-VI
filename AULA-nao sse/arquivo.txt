@@ -1,0 +1,8 @@
+jeimes
+12.000000
+horacio
+98.000000
+jeferson
+78.000000
+leorio
+17.000000
