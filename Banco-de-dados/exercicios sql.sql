@@ -107,3 +107,67 @@ LIMIT 5;
 SELECT * FROM alunos
 LIMIT 3
 OFFSET 3;
+
+SELECT COUNT(*) AS qnt
+FROM alunos;
+
+SELECT COUNT(*) AS qnt
+FROM alunos
+WHERE curso = 'Programação';
+
+SELECT AVG (idade) AS media
+FROM alunos;
+
+SELECT MAX (nota) AS maior
+FROM alunos;
+
+SELECT MIN (nota) AS menor
+FROM alunos;
+
+SELECT SUM (nota) AS soma
+FROM alunos;
+
+SELECT MIN (nota) AS maior,
+	   MAX (nota) AS menor,
+	   AVG (nota) AS media
+FROM alunos;
+
+SELECT cidade, COUNT(*) AS quantidade
+FROM alunos
+GROUP BY cidade;
+
+SELECT cidade, AVG(nota) AS media
+FROM alunos
+GROUP BY cidade;
+
+SELECT cidade, MAX(nota) AS maior
+FROM alunos
+GROUP BY cidade;
+
+SELECT cidade, COUNT(*) AS quantidade
+FROM alunos
+GROUP BY cidade
+HAVING COUNT(*) >= 3;
+
+SELECT cidade, COUNT(*) AS quantidade
+FROM alunos
+GROUP BY cidade
+HAVING COUNT(*) > 3;
+
+SELECT curso, AVG(nota) AS media
+FROM alunos
+GROUP BY curso
+HAVING AVG (nota) > 7;
+
+SELECT cidade, COUNT(*) AS quantidade, AVG (nota) AS media FROM alunos
+GROUP BY cidade
+HAVING COUNT (cidade) >= 3 AND AVG (nota) > 7
+ORDER BY media DESC;
+
+SELECT nome, idade, nota
+FROM alunos
+WHERE curso = 'Programação'
+AND nota >= 7
+ORDER BY nota DESC
+LIMIT 3;
+
