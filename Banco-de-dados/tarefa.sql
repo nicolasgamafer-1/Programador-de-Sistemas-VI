@@ -51,6 +51,114 @@ INSERT INTO alunos_antigos (nome, cidade) VALUES
 SELECT a.nome, c.nome FROM alunos AS a 
 INNER JOIN cursos AS c ON c.id = a.curso_id;
 
+SELECT a.nome, cidade, c.nome FROM alunos AS a 
+INNER JOIN cursos AS c ON c.id = a.curso_id;
+
 SELECT a.nome, cidade, c.nome, c.carga_horaria FROM alunos AS a 
 INNER JOIN cursos AS c ON c.id = a.curso_id;
+
+SELECT a.nome, cidade, c.nome FROM alunos AS a 
+INNER JOIN cursos AS c ON c.id = a.curso_id
+WHERE c.nome = 'Programação de Sistemas';
+
+SELECT a.nome, cidade, c.nome, c.carga_horaria FROM alunos AS a 
+INNER JOIN cursos AS c ON c.id = a.curso_id
+WHERE c.carga_horaria >=900;
+
+SELECT a.nome, c.nome
+FROM alunos AS a
+LEFT JOIN cursos AS c ON c.id = a.curso_id;
+
+/*por que ele trás todos os itens mesmo que não tenham releção
+com a outra tabela, esse aluno não tem curso */
+
+SELECT a.nome, c.nome, a.cidade
+FROM alunos AS a
+LEFT JOIN cursos AS c ON c.id = a.curso_id;
+
+SELECT a.nome, c.nome
+FROM alunos AS a
+LEFT JOIN cursos AS c ON c.id = a.curso_id
+WHERE c.id IS NULL;
+
+SELECT a.nome, c.nome, a.cidade
+FROM alunos AS a
+LEFT JOIN cursos AS c ON c.id = a.curso_id
+WHERE a.cidade = 'Curitiba';
+
+SELECT a.nome, c.nome
+FROM alunos AS a
+RIGHT JOIN cursos AS c ON c.id = a.curso_id;
+
+/*"Internet das Coisas"
+"Eletrônica"
+"Desenvolvimento Web"*/
+
+SELECT a.nome, c.nome, c.carga_horaria
+FROM alunos AS a
+RIGHT JOIN cursos AS c ON c.id = a.curso_id;
+
+/*o inner join pega os dados que tem a igualdade dos dois lados 
+e o left join pega todo um lado mesmo que não tenha igualdade dos 
+dois lados*/
+
+select nome from alunos
+union
+select nome from alunos_antigos;
+
+/*eles só aparecem 1 vês, porque o union não deixa repetir dados
+que se repetem nas duas tabelas*/
+
+select cidade from alunos
+union
+select cidade from alunos_antigos;
+
+select nome from alunos
+union
+select nome from alunos_antigos
+ORDER BY nome ASC;
+
+select nome from alunos
+union ALL
+select nome from alunos_antigos;
+
+/*o union all tem mais, porque ele deixa doplicado oque tem nas 
+duas tabelas*/
+
+/*o union pega as informações de 2 tabelas e não deixa elas
+se repetirem e o union all deixa*/
+
+/*o join mostra os dados de lado */
+/*o union mostra os dados um em baixo do outro*/
+
+/*o join pois mostrara a tabela dos cursos e dos alunos um ao lado do outro*/
+
+/*Ana
+Bruno
+Carlos
+Daniel
+Eduarda*/
+
+/*Ana
+Bruno
+Carlos
+Carlos
+Daniel
+Eduarda*/
+
+SELECT a.nome, cidade, c.nome FROM alunos AS a 
+INNER JOIN cursos AS c ON c.id = a.curso_id;
+
+SELECT a.nome, c.nome, c.carga_horaria
+FROM alunos AS a
+RIGHT JOIN cursos AS c ON c.id = a.curso_id
+WHERE a.id IS NULL;
+
+select nome from alunos
+union
+select nome from alunos_antigos;
+
+select nome from alunos
+union all
+select nome from alunos_antigos;
 
