@@ -191,7 +191,7 @@ int delete (){
 	
 	int controle = 0;
 	
-	printf("Qual o numero do codigo do produto que voce quer escluir: ");
+	printf("Qual o numero do codigo do produto que voce quer excluir: ");
 	scanf("%d", &controle);
 	
     // String de conexão — ajuste os dados conforme seu banco
@@ -241,14 +241,19 @@ int delete (){
 
 int update (){
 	
-	char controle = [100];
+	char controle[100];
 	int controle2 = 0;
 	int controle3 = 0;
+	int controle4 = 0;
 	
-	printf("qual o nome do produto o preco e a quantidade: ");
+	printf("qual o novo nome do produto: ");
 	scanf("%s", &controle);
+	printf("qual a nova quantidade do produto: ");
 	scanf("%d", &controle2);
+	printf("qual o novo valor do produto: ");
 	scanf("%d", &controle3);
+	printf("qual o id(codigo) do produto: ");
+	scanf("%d", &controle4);
 	
     // String de conexão — ajuste os dados conforme seu banco
     const char *conninfo = "host=localhost port=5432 dbname=Estoque user=postgres password=admin";
@@ -267,13 +272,12 @@ int update (){
 
     // Executa um delete simples
     char query[256];
-	snprintf(query, sizeof(query), "UPDATE estoque 
-SET produto = '%s', quantidade = %d, preco_unitario = %d WHERE id = %d;", controle, controle2, controle3);
+	snprintf(query, sizeof(query), "UPDATE estoque SET produto = '%s', quantidade = %d, preco_unitario = %d WHERE codigo = %d;", controle, controle2, controle3, controle4);
 	PGresult *res = PQexec(conn, query);
 
 
     if (PQresultStatus(res) != PGRES_TUPLES_OK) {
-        fprintf(stderr, "deletar: %s\n", PQerrorMessage(conn));
+        fprintf(stderr, "Atualizar: %s\n", PQerrorMessage(conn));
         PQclear(res);
         PQfinish(conn);
         return 1;

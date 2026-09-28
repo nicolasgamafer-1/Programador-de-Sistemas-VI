@@ -1,0 +1,24 @@
+Tubo Redondo
+1
+40
+15.00
+Barra Chata
+2
+50
+25.60
+Disco de Corte
+3
+50
+1.80
+Abacaxi amarelo
+55
+10
+7.99
+coca cola
+56
+3
+5.99
+Batata Baroa
+1175
+10
+5.99
